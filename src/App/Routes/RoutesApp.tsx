@@ -2,16 +2,16 @@
 import React from "react";
 import { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import * as LAZY_ROUTES from "./LazyRoutes";
+import { Common, Client } from "./LazyRoutes";
 // import ProtectedRoute from "./ProtectedRoute";
-
+import Loading from "../Components/Loading/Loading";
 
 const RoutesApp = () => {
   return (
     <React.Fragment>
-      <Suspense fallback={<div>Carregando...</div>}>
+      <Suspense fallback={<Loading />}>
         <Routes>
-          <Route path="/" element={<LAZY_ROUTES.Test />} />
+          <Route path="/" element={<Common.Login />} />
           <Route path="*" element={<Navigate to="/not-found" />} />
           {/* <Route
             path="/protected-ex"
@@ -22,8 +22,8 @@ const RoutesApp = () => {
             }
           /> */}
           {/* UNAUTHORIZE + NOTFOUND */}
-          <Route path="unauthorize" element={<LAZY_ROUTES.Unauthorize />} />
-          <Route path="not-found" element={<LAZY_ROUTES.NotFound />} />
+          <Route path="unauthorize" element={<Common.Unauthorize />} />
+          <Route path="not-found" element={<Common.NotFound />} />
         </Routes>
       </Suspense>
     </React.Fragment>
