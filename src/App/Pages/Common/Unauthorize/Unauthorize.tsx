@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosAlert } from "react-icons/io";
-import { Container, Content } from "./UnauthorizeStyles";
+import { Container, Content } from "./Unauthorize.style";
 
 const Unauthorize = () => {
   return (

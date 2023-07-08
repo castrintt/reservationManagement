@@ -2,7 +2,7 @@ import {
   Colors,
   DefaultBorderRadius,
   DefaultBoxShadow,
-} from "../../../Global/rootStyles";
+} from "@globals/rootStyles";
 import { styled } from "styled-components";
 
 const Container = styled.div`

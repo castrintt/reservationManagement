@@ -1,6 +1,6 @@
 import React from "react";
 import { IconType } from "react-icons";
-import { IconContainer } from "./ButtonIconStyle";
+import { IconContainer } from "./ButtonIcon.style";
 
 type ButtonIconProps = {
   icon: IconType;

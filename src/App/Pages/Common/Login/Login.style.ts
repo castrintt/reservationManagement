@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Colors, DefaultBorderRadius } from "./../../../Global/rootStyles";
+import { Colors, DefaultBorderRadius } from "../../../Global/rootStyles";
 import BarrilLogo from "../../../Assets/barril_logo.jpg";
 
 export const Container = styled.div`
@@ -35,7 +35,7 @@ export const Content = styled.div`
     height: 80%;
   }
   @media all and (min-width: 1240px) {
-    box-shadow: 0px 0px 20px 20px ${Colors.attention};
+    // box-shadow: 0px 0px 20px 20px ${Colors.attention};
     width: 80%;
     height: 80%;
   }

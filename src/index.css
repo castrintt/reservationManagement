@@ -19,6 +19,20 @@ body {
   box-sizing: border-box;
 }
 
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding-block: .8rem;
+  padding-left: .8rem;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  border: 1px solid #262626af;
+  outline: none;
+}
+
+
 
 
 /**

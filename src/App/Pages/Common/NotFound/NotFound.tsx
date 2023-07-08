@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Content } from "./NotFoundStyles";
+import { Container, Content } from "./NotFound.style";
 import { MdDangerous } from "react-icons/md";
 
 const NotFound = () => {

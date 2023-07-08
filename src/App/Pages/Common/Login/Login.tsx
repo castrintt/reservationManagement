@@ -1,6 +1,3 @@
-import Inputs from "../../../Components/Input/Inputs";
-import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
 import {
   Container,
   ImageContainer,
@@ -9,60 +6,44 @@ import {
   FormLabel,
   FormHeader,
   NavigateToRegisterSection,
-} from "./LoginStyles";
-import { Button } from "../../../Components/Button/Button";
+} from "./Login.style";
+import { Button } from "@components/Button/Button";
 import { BsGoogle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
-type IForms = {
-  email: string;
-  password: string;
-};
+import UseLoginController from "./Login.controller";
 
 const Login = () => {
-  const { register, handleSubmit } = useForm<IForms>();
-
-  const onSubmit: SubmitHandler<IForms> = (data) => {
-    console.log(data);
-  };
+  const { Actions, Register, States } = UseLoginController();
 
   return (
     <Container>
       <Content>
         <ImageContainer />
-        <FormContainer onSubmit={handleSubmit(onSubmit)}>
+        <FormContainer onSubmit={Actions.onSubmit}>
           <FormHeader>Login</FormHeader>
           <FormLabel>
             <span>Email: </span>
-            <Inputs
-              {...register("email")}
+            <input
+              {...Register.input("email")}
               {...{ required: true }}
               type="text"
             />
           </FormLabel>
           <FormLabel>
             <span>Senha: </span>
-            <Inputs
-              {...register("password")}
+            <input
+              {...Register.input("password")}
               {...{ required: true }}
               type="password"
             />
           </FormLabel>
           <FormLabel>
-            <Button.Container
-              type="submit"
-              onClick={() => console.log("")}
-              variant="default"
-            >
+            <Button.Container type="submit" variant="default">
               <Button.Text text="login" />
             </Button.Container>
           </FormLabel>
           <FormLabel>
-            <Button.Container
-              type="submit"
-              onClick={() => console.log("")}
-              variant="attention"
-            >
+            <Button.Container type="submit" variant="attention">
               <Button.Icon icon={BsGoogle} />
               <Button.Text text="google" />
             </Button.Container>

@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Common, Client } from "./LazyRoutes";
 // import ProtectedRoute from "./ProtectedRoute";
-import Loading from "../Components/Loading/Loading";
+import Loading from "@components/Loading/Loading";
 
 const RoutesApp = () => {
   return (

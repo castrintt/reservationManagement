@@ -5,7 +5,7 @@ import {
   DisabledButton,
   ActiveButton,
   AttentionButton,
-} from "./ButtonContainerStyle";
+} from "./ButtonContainer.style";
 import { Colors } from "../../../Global/rootStyles";
 
 type Props = {

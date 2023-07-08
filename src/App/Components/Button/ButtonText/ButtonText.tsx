@@ -1,5 +1,5 @@
 import React from "react";
-import { TextContainer } from "./ButtonTextStyle";
+import { TextContainer } from "./ButtonText.style";
 
 type Props = {
   text: string;

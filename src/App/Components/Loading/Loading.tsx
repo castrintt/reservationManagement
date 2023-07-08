@@ -1,6 +1,6 @@
 import React from "react";
 import CheersLoading from "../../Assets/cheers.gif";
-import { Container, Spinner } from "./LoadingStyle";
+import { Container, Spinner } from "./Loading.style";
 
 const Loading = () => {
   return (
