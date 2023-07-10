@@ -15,7 +15,6 @@ import OpenBeerVideo from "@assets/beer.mp4";
 
 const Login = () => {
   const { Actions, Register } = UseLoginController();
-
   return (
     <Container>
       <Content>

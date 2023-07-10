@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 
-type FormValues = {
+type RegisterFormValues = {
   email: string;
   name: string;
   password: string;
@@ -9,10 +9,10 @@ type FormValues = {
 };
 
 const UseRegisterController = () => {
-  const { register, handleSubmit } = useForm<FormValues>();
+  const { register, handleSubmit } = useForm<RegisterFormValues>();
   const phonePattern = "+55 (99) 9 9999-9999";
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<RegisterFormValues> = (data) => {
     console.log(data);
   };
 

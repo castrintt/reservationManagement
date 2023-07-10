@@ -1,4 +1,4 @@
-import Container from "@components/Container/Container";
+import DefaultContainer from "@components/Container/Container";
 import UseRegisterController from "./Register.controller";
 import {
   Content,
@@ -17,7 +17,7 @@ const Register = () => {
   const { Actions, Helpers } = UseRegisterController();
 
   return (
-    <Container>
+    <DefaultContainer>
       <Content>
         <VideoContainer>
           <video autoPlay loop muted preload="metadata">
@@ -74,7 +74,7 @@ const Register = () => {
           </NavigateToRegisterSection>
         </FormContainer>
       </Content>
-    </Container>
+    </DefaultContainer>
   );
 };
 

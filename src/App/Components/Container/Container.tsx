@@ -4,8 +4,8 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Container = ({ children }: Props) => {
+const DefaultContainer = ({ children }: Props) => {
   return <ContainerStyle>{children}</ContainerStyle>;
 };
 
-export default Container;
+export default DefaultContainer;

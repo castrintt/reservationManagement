@@ -1,13 +1,17 @@
 import { lazy } from "react";
 
 const Common = {
-  Unauthorize: lazy(() => import("../Pages/Common/Unauthorize/Unauthorize")),
-  NotFound: lazy(() => import("../Pages/Common/NotFound/NotFound")),
-  Login: lazy(() => import("../Pages/Common/Login/Login")),
+  Unauthorize: lazy(() => import("@pages/Common/Unauthorize/Unauthorize")),
+  NotFound: lazy(() => import("@pages/Common/NotFound/NotFound")),
+  Login: lazy(() => import("@pages/Common/Login/Login")),
 };
 
 const Client = {
-  Register: lazy(() => import("../Pages/Client/Register/Register")),
+  Register: lazy(() => import("@pages/Client/Register/Register")),
 };
 
-export { Common, Client };
+const Adm = {
+  Home: lazy(() => import("@pages/Adm/Home/Home")),
+};
+
+export { Common, Client, Adm };

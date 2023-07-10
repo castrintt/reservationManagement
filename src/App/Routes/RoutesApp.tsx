@@ -2,7 +2,7 @@
 import React from "react";
 import { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Common, Client } from "./LazyRoutes";
+import { Common, Client, Adm } from "./LazyRoutes";
 // import ProtectedRoute from "./ProtectedRoute";
 import Loading from "@components/Loading/Loading";
 
@@ -15,6 +15,7 @@ const RoutesApp = () => {
           <Route path="*" element={<Navigate to="/not-found" />} />
 
           <Route path="/register" element={<Client.Register />} />
+          <Route path="/adm/home" element={<Adm.Home />} />
           {/* <Route
             path="/protected-ex"
             element={
