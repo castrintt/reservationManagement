@@ -13,6 +13,8 @@ const RoutesApp = () => {
         <Routes>
           <Route path="/" element={<Common.Login />} />
           <Route path="*" element={<Navigate to="/not-found" />} />
+
+          <Route path="/register" element={<Client.Register />} />
           {/* <Route
             path="/protected-ex"
             element={
@@ -21,6 +23,7 @@ const RoutesApp = () => {
               </ProtectedRoute>
             }
           /> */}
+
           {/* UNAUTHORIZE + NOTFOUND */}
           <Route path="unauthorize" element={<Common.Unauthorize />} />
           <Route path="not-found" element={<Common.NotFound />} />
