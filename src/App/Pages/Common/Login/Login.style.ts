@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
-import { Colors, DefaultBorderRadius } from "../../../Global/rootStyles";
-import BarrilLogo from "../../../Assets/barril_logo.jpg";
+import { Colors, DefaultBorderRadius } from "@globals/rootStyles";
 
 export const Container = styled.div`
   width: 100vw;
@@ -41,25 +40,27 @@ export const Content = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const VideoContainer = styled.div`
   display: none;
   @media all and (min-width: 1240px) {
     display: block;
     width: 50%;
     height: 100%;
-    background-image: url(${BarrilLogo});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-right-radius: ${DefaultBorderRadius};
+      border-bottom-right-radius: ${DefaultBorderRadius};
+    }
   }
 `;
-
 export const FormContainer = styled.form`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
@@ -70,7 +71,7 @@ export const FormContainer = styled.form`
 `;
 
 export const FormHeader = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   max-width: 90%;
   width: 100%;
@@ -86,7 +87,7 @@ export const FormLabel = styled.label`
   align-items: flex-start;
   gap: 0.5rem;
   span {
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: normal;
   }
 `;
@@ -100,10 +101,10 @@ export const NavigateToRegisterSection = styled.section`
   gap: 0.5rem;
   a {
     text-style: none;
-    font-size: 1.1rem;
+    font-size: .9rem;
     color: ${Colors.default};
   }
   span {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 `;

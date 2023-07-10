@@ -6,12 +6,14 @@ const CommonProperties = `
   border-radius: ${DefaultBorderRadius};
   border: none;
   outline: none;
-  padding: 1rem 0.5rem;
+  padding: .9rem 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;`;
+  gap: 1rem;
+  cursor:pointer;
+  `;
 
 export const DefaultButton = styled.button`
   ${CommonProperties}

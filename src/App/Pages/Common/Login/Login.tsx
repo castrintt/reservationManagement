@@ -1,6 +1,6 @@
 import {
   Container,
-  ImageContainer,
+  VideoContainer,
   Content,
   FormContainer,
   FormLabel,
@@ -11,14 +11,19 @@ import { Button } from "@components/Button/Button";
 import { BsGoogle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import UseLoginController from "./Login.controller";
+import OpenBeerVideo from "@assets/beer.mp4";
 
 const Login = () => {
-  const { Actions, Register, States } = UseLoginController();
+  const { Actions, Register } = UseLoginController();
 
   return (
     <Container>
       <Content>
-        <ImageContainer />
+        <VideoContainer>
+          <video autoPlay loop muted preload="metadata">
+            <source src={OpenBeerVideo} type="video/mp4" />
+          </video>
+        </VideoContainer>
         <FormContainer onSubmit={Actions.onSubmit}>
           <FormHeader>Login</FormHeader>
           <FormLabel>

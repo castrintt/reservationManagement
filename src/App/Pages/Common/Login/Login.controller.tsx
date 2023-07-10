@@ -7,7 +7,7 @@ type ILogin = {
 };
 
 const UseLoginController = () => {
-  const { register, handleSubmit, watch } = useForm<ILogin>();
+  const { register, handleSubmit } = useForm<ILogin>();
 
   const formValidation = (data: ILogin) => {
     if (!data.email) {
@@ -25,9 +25,6 @@ const UseLoginController = () => {
   return {
     Actions: {
       onSubmit: handleSubmit(submitHandler),
-    },
-    States: {
-      input: watch,
     },
     Register: {
       input: register,
