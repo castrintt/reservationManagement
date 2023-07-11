@@ -7,11 +7,12 @@ export const Item = styled.div<{ selected: boolean }>`
   width: 100%;
   height: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.7rem;
   cursor: pointer;
   transition-duration: 0.5s;
+  border-radius: 0.5rem;
 
   &:hover {
     background-color: ${Colors.attention};
@@ -24,15 +25,18 @@ export const Item = styled.div<{ selected: boolean }>`
     }
   }
 
-  border-radius: 0.5rem;
   svg {
     font-size: 1.4rem;
     color: ${({ selected }) => (selected ? "white" : "black")};
+    position: relative;
+    left: .8rem;
   }
 
   span {
     font-weight: bold;
     font-size: 0.9rem;
     color: ${({ selected }) => (selected ? "white" : "black")};
+    position: relative;
+    left: .8rem;
   }
 `;

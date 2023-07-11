@@ -1,6 +1,6 @@
+import React from "react";
 import DefaultContainer from "@components/Container/Container";
 import UseHomeController from "./Home.controller";
-import { FaBeer } from "react-icons/fa";
 import { Sidebar } from "@components/Sidebar/Sidebar";
 
 const Home = () => {
@@ -9,27 +9,11 @@ const Home = () => {
     <DefaultContainer>
       <Sidebar.Container isOpen={States.drawerIsOpen}>
         <Sidebar.HeaderGroup action={Actions.onOpenCloseDrawer}>
-          <Sidebar.Item
-            isOpen={States.drawerIsOpen}
-            selected={false}
-            action={() => console.log('')}
-            icon={FaBeer}
-            text="Teste"
-          />
-          <Sidebar.Item
-            isOpen={States.drawerIsOpen}
-            selected={false}
-            action={() => console.log('')}
-            icon={FaBeer}
-            text="Teste"
-          />
-          <Sidebar.Item
-            isOpen={States.drawerIsOpen}
-            selected={false}
-            action={() => console.log('')}
-            icon={FaBeer}
-            text="Teste"
-          />
+          {States.sidebarProperties.map((properties, index) => (
+            <React.Fragment key={index}>
+              <Sidebar.Item {...properties} />
+            </React.Fragment>
+          ))}
         </Sidebar.HeaderGroup>
         <Sidebar.Footer />
       </Sidebar.Container>
