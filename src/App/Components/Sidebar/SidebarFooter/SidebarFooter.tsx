@@ -1,15 +1,13 @@
 import React from "react";
 import { FooterContainer } from "./SidebarFooter.style";
+import { BiLogOut } from "react-icons/bi";
 
-type SidebarFooterProps = {
-  children: React.ReactNode;
-  action: () => void;
-};
-
-const SidebarFooter = ({ children, action }: SidebarFooterProps) => {
+const SidebarFooter = () => {
   return (
-    <FooterContainer onClick={action}>
-      <div>{children}</div>
+    <FooterContainer>
+      <div>
+        <BiLogOut />
+      </div>
     </FooterContainer>
   );
 };

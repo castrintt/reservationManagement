@@ -1,7 +1,7 @@
 const Red = "#D22929";
 const Gray = "#262626";
 const Green = "#62C132";
-const Orange = "#EC9F3A";
+const Orange = "rgba(255, 115, 0, 0.836)";
 const Disabled = "#D3CAD6";
 
 export const Colors = {

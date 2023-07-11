@@ -1,29 +1,29 @@
+import { Colors } from "@globals/rootStyles";
 import { styled } from "styled-components";
 
 export const FooterContainer = styled.div`
+  flex-grow: 0;
   width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  height: 5rem;
+  transition-duration: 0.5s;
 
   div {
-    width: 100%;
-    height: 4rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    font-size: 2rem;
+    height: 50%;
+    padding-block: 0.4rem;
+    border-radius: 0.4rem;
     cursor: pointer;
-    &:hover {
-      background-color: rgba(255, 115, 0, 0.836);
-      svg {
-        color: white;
-      }
-      span {
-        color: white;
-      }
+  }
+
+  div:hover {
+    transition-duration: 0.5s;
+    background-color: ${Colors.attention};
+    svg {
+      color: white;
     }
   }
 `;

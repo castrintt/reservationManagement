@@ -1,13 +1,13 @@
 import React from "react";
-import { SideContainer } from "./SidebarContainer.style";
+import { Container } from "./SidebarContainer.style";
 
 type SidebarContainerProps = {
-  isOpen: boolean;
   children: React.ReactNode;
+  isOpen: boolean;
 };
 
-const SidebarContainer = ({ isOpen, children }: SidebarContainerProps) => {
-  return <SideContainer isOpen={isOpen}>{children}</SideContainer>;
+const SidebarContainer = ({ children, isOpen }: SidebarContainerProps) => {
+  return <Container isOpen={isOpen}>{children}</Container>;
 };
 
 export default SidebarContainer;

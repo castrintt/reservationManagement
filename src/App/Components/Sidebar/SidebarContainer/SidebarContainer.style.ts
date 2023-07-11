@@ -1,19 +1,17 @@
 import { styled } from "styled-components";
 
-export const SideContainer = styled.div<{ isOpen: boolean }>`
+export const Container = styled.div<{ isOpen: boolean }>`
   position: fixed;
+  width: ${({ isOpen }) => (isOpen ? "12rem" : "3rem")};
+  height: 100vh;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: ${({ isOpen }) => (isOpen ? "13rem" : "4rem")};
   background-color: white;
-  box-shadow: 3px 8px 8px rgba(0, 0, 0, 0.479);
+  box-shadow: 2px 0 5px orange;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  span {
-    display:${({isOpen}) => (isOpen ? 'block' : 'none')}
-  }
+  padding: 1rem;
+  transition-duration: 0.2s;
 `;
